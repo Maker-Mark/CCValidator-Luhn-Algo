@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <script src='./main.js'></script>
+    <script src="./main.js"></script>
+  </head>
 
-</head>
-
-
-
-<body>
-
-
+  <body>
     <!-- <form onclick="setName(num)" action="">
         <input type="text" name='num' id='num'>
         <input type="button">
     </form> -->
-    <button onclick="setName(4485518100339602)" type="submit"> Click me</button>
+    <input type="text" id="num" placeholder="Creditcard Number" onkeyup="setName(document.getElementById('num').value)"/>
+    <!-- <button
+      onclick="setName(document.getElementById('num').value)"
+      type="submit" onkeydown=""
+    > -->
+    
+    </button>
     <!-- <button type="submit" onclick="setName()"></button> -->
-    <p class="card-type"> Hello</p>
-</body>
-<script src='./main.js'></script>
-
+    <p class="card-type">Hello</p>
+  </body>
+  <script src="./main.js"></script>
 </html>
