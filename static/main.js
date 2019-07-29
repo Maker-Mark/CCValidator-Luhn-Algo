@@ -49,9 +49,16 @@ validateNum = cardNumStr => {
 
 setName = cardNumStr => {
   const type = validateNum(cardNumStr);
+  console.log(cardNumStr);
   console.log(type);
-  const loc = document.querySelector(".card-type");
-  loc.textContent = type;
+  const loc = document.querySelector("#cc-icon");
+  loc.className = `fab fa-cc-${type.toLowerCase()} fa-3x pl-3`;
 };
 
-// console.log(validateNum("5185518100339602"));
+/*
+- Real-time spacing based on card type
+- Responsive design
+- Color coat text box and add responses
+
+
+*/
