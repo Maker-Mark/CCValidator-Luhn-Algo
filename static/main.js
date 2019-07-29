@@ -52,13 +52,13 @@ setName = cardNumStr => {
   console.log(cardNumStr);
   console.log(type);
   const loc = document.querySelector("#cc-icon");
-  loc.className = `fab fa-cc-${type.toLowerCase()} fa-3x pl-3`;
+  loc.className = `fab fa-cc-${type.toLowerCase()} fa-2x pl-2 label`;
 };
 
 /*
 - Real-time spacing based on card type
 - Responsive design
-- Color coat text box and add responses
+- Color-coat text box and add responses
 
 
 */

@@ -26,27 +26,30 @@
         <input type="text" name='num' id='num'>
         <input type="button">
     </form> -->
+    <div class="container">
+      <form>
+        <div class="input-group d-inline-flex row">
+          <input
+            class="form-control col-md"
+            type="text"
+            id="ccnum"
+            placeholder="Creditcard Number"
+            onkeyup="setName(document.getElementById('ccnum').value)"
+            pattern="[0-9.]+"
+            required
+            autofocus
+          />
+          <span class="input-group-addon col-md"
+            ><i id="cc-icon" class="fas fa-credit-card fa-2x pl-1 label"></i
+          ></span>
 
-    <form>
-      <div class="input-group">
-        <input
-          class="form-control"
-          type="text"
-          id="ccnum"
-          placeholder="Creditcard Number"
-          onkeyup="setName(document.getElementById('ccnum').value)"
-          pattern="[0-9.]+"
-          required
-          autofocus
-        />
-        <span class="input-group-addon"
-          ><i id="cc-icon" class="fas fa-credit-card fa-3x pl-3"></i
-        ></span>
-
-        <!-- document.getElementById('num').value -->
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+          <!-- document.getElementById('num').value -->
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">
+          Submit
+        </button>
+      </form>
+    </div>
   </body>
   <script src="../static/main.js"></script>
 </html>
