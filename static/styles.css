@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.container {
+  background-color: #f2f2f2;
+  border: 0px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type="text"] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  padding: 12px;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 44px;
+}
+
+.btn:hover {
+  background-color: #a04545;
+}
+
+a {
+  color: #2196f3;
+  font-size: 1.2rem;
+}
+
+hr {
+  border: 1px solid #2196f3;
+}
+
+span.price {
+  float: right;
+  font-size: 1.2rem;
+  color: rgb(0, 0, 0);
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Responsive layout: If the screen/user agent pixels is than 800px wide, I use flex box's flex direction to go in column instead of row.
+This allows the two columns stack on top of each other */
+@media (max-width: 800px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+}

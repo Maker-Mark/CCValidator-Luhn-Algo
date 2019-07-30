@@ -1,55 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Credit Card Validator</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <script src="https://kit.fontawesome.com/be4be1697e.js"></script>
+<html>
 
-    <link rel="stylesheet" href="../static/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Credit Card Validator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/be4be1697e.js"></script>
+  <link rel="stylesheet" href="../static/styles.css" />
+  <script type="text/javascript" src="../static/main.js"></script>
+</head>
 
-    <script
-      type="text/javascript"
-      src="{{ url_for('static', filename='../static/main.js') }}"
-    ></script>
-  </head>
-
-  <body>
-    <!-- <form onclick="setName(num)" action="">
-        <input type="text" name='num' id='num'>
-        <input type="button">
-    </form> -->
-    <div class="container">
-      <form>
-        <div class="input-group d-inline-flex row">
-          <input
-            class="form-control col-md"
-            type="text"
-            id="ccnum"
-            placeholder="Creditcard Number"
-            onkeyup="setName(document.getElementById('ccnum').value)"
-            pattern="[0-9.]+"
-            required
-            autofocus
-          />
-          <span class="input-group-addon col-md"
-            ><i id="cc-icon" class="fas fa-credit-card fa-2x pl-1 label"></i
-          ></span>
-
-          <!-- document.getElementById('num').value -->
+<body>
+  <img src="https://static.slickdealscdn.com/attachment/1/1/8/5/0/8/7/4584251.attach" class="img-fluid" alt="" />
+  <h2 class="text-center">Your Dog's Food is Almost on the way!</h2>
+  <p class="text-center">
+    Complete the checkout form below to complete your purchase!
+  </p>
+  <div class="main container ">
+    <div class="container carts col-md mt-4 mb-4">
+      <h4>
+        Current Cart
+        <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span>
+      </h4>
+      <p><a href="#">Greenies </a> <span class="price">$37.99</span></p>
+      <p><a href="#">Milk Bones</a> <span class="price">$50.45</span></p>
+      <p><a href="#">Pill Pockets</a> <span class="price">$3.21</span></p>
+      <p><a href="#">Fish Flakes</a> <span class="price">$2.99</span></p>
+      <hr />
+      <p>
+        Total <span class="price"><b>$130</b></span>
+      </p>
+      <img class="img-fluid " src="https://i.ibb.co/6mxW9V3/UIKtv7t.png" alt="">
+      <a href="http://www.brooklyn.cuny.edu/web/home.php"> Report this <strong> ad</strong> </a>
+    </div>
+    <div class="container payment col-md mt-3 mb-4">
+      <form action="main.js">
+        <div class="row">
+          <div class="col">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fab fa-cc-visa fa-3x" style="color:navy;"></i>
+              <i class="fab fa-cc-amex fa-3x" style="color:rgb(190, 168, 40);"></i>
+              <i class="fab fa-cc-mastercard fa-3x" style="color:red;"></i>
+              <i class="fab fa-cc-discover fa-3x" style="color:rgb(255, 72, 0);"></i>
+              <i class="fab fa-cc-diners-club fa-3x" style="color:rgb(0, 0, 0);"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="Grace Hopper" />
+            <label for="ccnum">Credit card number</label>
+            <div class="input-group d-inline-flex row">
+              <input class="  col-md ml-3 mb-2" type="text" id="ccnum" placeholder="Creditcard Number"
+                onkeyup="setName(document.getElementById('ccnum').value)" required autofocus />
+              <span class="input-group-addon col-md"><i id="cc-icon"
+                  class="fas fa-credit-card pb-1 fa-3x label"></i></span>
+              <!-- document.getElementById('num').value -->
+            </div>
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="October" />
+            <div class="row">
+              <div class="col-6">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2021" />
+              </div>
+              <div class="col-6">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" />
+              </div>
+            </div>
+          </div>
         </div>
-        <button type="submit" class="btn btn-primary mt-3">
-          Submit
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr" />
+          Shipping address same as billing
+        </label>
+        <button id="submit-button" type="submit" class="btn btn-primary mt-3" disabled>
+          Type Full Number
         </button>
       </form>
     </div>
-  </body>
-  <script src="../static/main.js"></script>
+  </div>
+  </div>
+  <script type="text/javascript" src="../static/main.js"></script>
+</body>
+
 </html>
