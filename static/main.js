@@ -37,10 +37,10 @@ luhn = cardNumStr => {
 validateNum = cardNumber => {
   //Replace spaces with nothing
   cardNumber = cardNumber.replace(/\s/g, "");
-  var card = {
+  var cards = {
     visa: /^4[0-9]{12}(?:[0-9]{3})?$/,
     mastercard: /^(5[1-5]\d)|2(22)\d|2[3-9]\d$/,
-    amex: /^3[4-7]\d$/,
+    amex: /^3[4-7]\d{13}$/,
     "diners-club": /^3(?:0[0-5]|[68][0-9])\d/,
     discover: /^6(?:011|5\d)\d/
   };
@@ -57,7 +57,7 @@ validateNum = cardNumber => {
 // while also giving feedback on the submit button
 setName = cardNumStr => {
   str = cardNumStr.replace(/\s/g, "");
-  const type = validateNum(str);
+  let type = validateNum(str);
 
   //Grab the icon
   const loc = document.querySelector("#cc-icon");
