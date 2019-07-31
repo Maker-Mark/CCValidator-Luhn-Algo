@@ -8,11 +8,12 @@ Note: You may need to try `pip3 install -r requirements.txt`
 Simply navigate to the folder with a `main.py` (it's already in the root folder) and run the app via `python main.py` or `python3 main.py`.
 
 The application should be running at `http://127.0.0.0:5000/` or `localhost:5000`
-Try VISA:4539979820991450,c,4539352675721569990
-    AMEX:349057239333032, 371067929418952
-    MASTERCARD:5136440315516223, 2221000786722388
-    DISCOVER:6011987337215950, 6011588501241465
-    DINERS CLUB: 30384568581872,30532405664760
+### Try it out (if any are being weird, try NOT copy and pasting, it makes things werid)
+- Try VISA:4539979820991450,c,4539352675721569990
+    - AMEX:349057239333032, 371067929418952
+    - MASTERCARD:5136440315516223, 2221000786722388
+    - DISCOVER:6011987337215950, 6011588501241465
+    - DINERS CLUB: 30384568581872,30532405664760
 
 
 ## Watch it be responsive!
